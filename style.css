@@ -8,14 +8,6 @@ body {
     color: #212529;
   }
   
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
   .header {
     color: white;
     padding: 2rem 0;
@@ -24,9 +16,18 @@ body {
     font-weight: bold; 
     position: relative;
     transition: transform 0.1s ease-out;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
+
+  @media (max-width: 600px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+    .header p {
+      font-size: 1rem;
+    }
+  }
+  
   section, footer {
     padding: 2rem;
     max-width: 800px;
@@ -45,6 +46,8 @@ body {
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 20px; /* Space between grid items */
     justify-items: center; /* Center items horizontally */
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .project {
@@ -54,9 +57,23 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%; /* Ensure the project cards fit within the grid */
-    max-width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
+  .project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  /* Stack projects in one column on small screens */
+  @media (max-width: 700px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+  }
   
   footer {
     text-align: center;
@@ -64,4 +81,3 @@ body {
     padding: 2rem 0;
     color: #6c757d;
   }
-  
