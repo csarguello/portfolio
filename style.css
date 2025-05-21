@@ -16,7 +16,18 @@ body {
     text-decoration: underline;
   }
   
-  header, section, footer {
+  .header {
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold; 
+    position: relative;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  section, footer {
     padding: 2rem;
     max-width: 800px;
     margin: auto;
@@ -29,13 +40,23 @@ body {
     padding: 4rem 2rem;
   }
   
-  .projects .project {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally */
+  }
+  
+  .project {
     background: #ffffff;
     padding: 1rem;
-    margin: 1rem 0;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Ensure the project cards fit within the grid */
+    max-width: fit-content;
   }
+  
   
   footer {
     text-align: center;
