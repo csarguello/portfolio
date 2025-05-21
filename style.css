@@ -56,16 +56,19 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Ensure the project cards fit within the grid */
-    max-width: 100%;
+    width: 100%;
+    max-width: 350px; /* Add this line */
     box-sizing: border-box;
+    margin: auto;     /* Center in grid cell */
   }
   
   .project img {
     max-width: 100%;
+    max-height: 200px; /* Add this line */
     height: auto;
     border-radius: 8px;
     display: block;
+    margin: auto;
   }
   
   /* Stack projects in one column on small screens */
